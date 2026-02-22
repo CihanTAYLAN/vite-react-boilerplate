@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+
+  --color-bg-start: #f8fafc;
+  --color-bg-mid: #eef2ff;
+  --color-bg-end: #e2e8f0;
+
+  --color-surface: rgba(255, 255, 255, 0.84);
+  --color-surface-strong: #ffffff;
+  --color-border: #cbd5e1;
+
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+
+  --color-primary: #0f172a;
+  --color-primary-hover: #1e293b;
+  --color-primary-foreground: #f8fafc;
+
+  --color-secondary: #e2e8f0;
+  --color-secondary-hover: #cbd5e1;
+  --color-secondary-foreground: #0f172a;
+
+  --color-header-bg: rgba(255, 255, 255, 0.78);
+  --color-ring: #334155;
+
+  --color-link: #0f172a;
+  --color-link-hover: #334155;
+
+  --color-hero-from: #cffafe;
+  --color-hero-via: #e0f2fe;
+  --color-hero-to: #f1f5f9;
+  --color-badge-bg: rgba(255, 255, 255, 0.82);
+  --color-badge-border: #7dd3fc;
+  --color-badge-text: #075985;
+
+  --color-code-bg: #0f172a;
+  --color-code-text: #e2e8f0;
+}
+
+:root.dark {
+  color-scheme: dark;
+
+  --color-bg-start: #0f172a;
+  --color-bg-mid: #111827;
+  --color-bg-end: #020617;
+
+  --color-surface: rgba(15, 23, 42, 0.72);
+  --color-surface-strong: #020617;
+  --color-border: #1e293b;
+
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+
+  --color-primary: #0891b2;
+  --color-primary-hover: #06b6d4;
+  --color-primary-foreground: #ecfeff;
+
+  --color-secondary: #1e293b;
+  --color-secondary-hover: #334155;
+  --color-secondary-foreground: #e2e8f0;
+
+  --color-header-bg: rgba(2, 6, 23, 0.74);
+  --color-ring: #67e8f9;
+
+  --color-link: #67e8f9;
+  --color-link-hover: #a5f3fc;
+
+  --color-hero-from: rgba(12, 74, 110, 0.35);
+  --color-hero-via: rgba(15, 23, 42, 0.9);
+  --color-hero-to: rgba(15, 23, 42, 0.95);
+  --color-badge-bg: rgba(2, 6, 23, 0.86);
+  --color-badge-border: #155e75;
+  --color-badge-text: #67e8f9;
+
+  --color-code-bg: #020617;
+  --color-code-text: #e2e8f0;
+}
+
+/* Quick preset switch via <html data-palette="..."></html> */
+:root[data-palette="emerald"] {
+  --color-primary: #065f46;
+  --color-primary-hover: #047857;
+  --color-primary-foreground: #ecfdf5;
+  --color-link: #065f46;
+  --color-link-hover: #047857;
+  --color-hero-from: #d1fae5;
+  --color-hero-via: #ecfdf5;
+  --color-hero-to: #f0fdf4;
+  --color-badge-border: #6ee7b7;
+  --color-badge-text: #065f46;
+}
+
+:root.dark[data-palette="emerald"] {
+  --color-primary: #10b981;
+  --color-primary-hover: #34d399;
+  --color-primary-foreground: #022c22;
+  --color-link: #6ee7b7;
+  --color-link-hover: #a7f3d0;
+  --color-hero-from: rgba(6, 78, 59, 0.5);
+  --color-badge-border: #047857;
+  --color-badge-text: #6ee7b7;
+}
+
+:root[data-palette="sunset"] {
+  --color-primary: #9a3412;
+  --color-primary-hover: #c2410c;
+  --color-primary-foreground: #fff7ed;
+  --color-link: #9a3412;
+  --color-link-hover: #c2410c;
+  --color-hero-from: #ffedd5;
+  --color-hero-via: #fff7ed;
+  --color-hero-to: #fef2f2;
+  --color-badge-border: #fdba74;
+  --color-badge-text: #9a3412;
+}
+
+:root.dark[data-palette="sunset"] {
+  --color-primary: #fb923c;
+  --color-primary-hover: #fdba74;
+  --color-primary-foreground: #431407;
+  --color-link: #fdba74;
+  --color-link-hover: #fed7aa;
+  --color-hero-from: rgba(124, 45, 18, 0.45);
+  --color-badge-border: #c2410c;
+  --color-badge-text: #fdba74;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    var(--color-bg-start) 0%,
+    var(--color-bg-mid) 38%,
+    var(--color-bg-end) 100%
+  );
+  color: var(--color-text);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  color: inherit;
+}

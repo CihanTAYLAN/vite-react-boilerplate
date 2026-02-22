@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+*.tsbuildinfo
+
+# Environment overrides
+.env
+.env.local
+
+# Editor/system
+.DS_Store
+.vscode
+.idea
